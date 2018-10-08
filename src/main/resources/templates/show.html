@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>Show User</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="row">
+            <div class="col-xs-8 col-md-8">
+                <h3>
+                    <a href="/user" class="btn btn-primary"><span class="glyphicon glyphicon-list"></span> User</a>
+                </h3>
+                <h2 th:text="${user.handle}"></h2>
+                <h2></h2>
+                <dl class="list">
+                    <dt>User Number of Posts</dt>
+                    <dd th:text="${user.numberOfPosts}"></dd>
+                    <dt>User Description</dt>
+                    <dd th:text="${user.banned}"></dd>
+                </dl>
+            </div>
+        </div>
+    </body>
+</html>
